@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+@mixin initial {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.root {
+  @keyframes appear {
+    0% {
+      @include initial;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --padding: calc(var(--spacing-base) * 2);
+
+  @include initial;
+
+  animation: 0.3s ease-out appear calc(300ms + 50ms * var(--i)) forwards;
+  flex-basis: calc(50% - var(--content-spacing) / 2);
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: var(--padding);
+  border-radius: calc(var(--padding) / 2);
+  background-color: var(--color-panel);
+  box-shadow: 0 5px 10px 0 var(--color-panel-shadow);
+
+  @media (width < #{$bp * 0.75}) {
+    flex-basis: 100%;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.full_width {
+  flex-basis: 100%;
+}

@@ -1,0 +1,33 @@
+:root {
+  // Text
+  --font-size-base: 12px;
+  --font-size-huge: 4em;
+  --font-size-xxl: 3em;
+  --font-size-xl: 2em;
+  --font-size-l: 1.5em;
+  --font-size-small: 0.8em;
+  --font-weight-base: 100;
+  --font-weight-highlight: 600;
+  // Spacing
+  --spacing-base: 10px;
+  // Colors
+  --color-highlighted-text: #fff;
+  --color-main-text: rgba(230, 230, 230, 08);
+  --color-faded-text: rgba(200, 200, 200, 0.4);
+  --color-panel: #4e4e4e3a;
+  --color-main-wrapper: #19191962;
+  --color-panel-shadow: rgba(0, 0, 0, 0.05);
+  --color-main-wrapper-shadow: rgba(0, 0, 0, 0.3);
+  --color-status-ok: #81fc6c;
+  --color-info-1: var(--color-status-ok);
+  --color-info-2: #ff8509;
+  --color-info-3: #991bfa;
+  --color-info-4: #06f1e3;
+  --color-info-5: #0137f5;
+  --color-info-6: #fe6a2a;
+  --color-main-background: linear-gradient(45deg, rgb(32, 32, 89), rgb(50, 29, 75));
+  --color-form-element-background: rgba(0, 0, 0, 0.2);
+  --color-action-primary: #6dd6b833;
+  // Sizing
+  --form-element-height: 40px;
+}

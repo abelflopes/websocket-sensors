@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.root {
+  --content-spacing: calc(var(--spacing-base) * 2);
+  --padding: calc(var(--spacing-base) * 4);
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  opacity: 0;
+  animation: 0.4s ease-out appear 100ms forwards;
+  margin: 0 auto;
+  width: 100dvw;
+  box-sizing: border-box;
+  max-width: $bp;
+  padding: var(--padding);
+  border-radius: calc(var(--padding) / 2);
+  background-color: var(--color-main-wrapper);
+  box-shadow: 0 20px 60px 0 var(--color-main-wrapper-shadow);
+
+  @media (width < $bp) {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.content {
+  display: flex;
+  gap: var(--content-spacing);
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: calc(var(--padding) / 2);
+  margin-bottom: var(--padding);
+
+  @media (width < $bp) {
+    gap: calc(var(--padding));
+  }
+}
+
+.heading {
+  margin: 0 auto 0 0;
+  line-height: var(--font-size-small);
+
+  @media (width < $bp) {
+    width: 100%;
+  }
+}

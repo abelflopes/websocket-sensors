@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+
+.root {
+  @keyframes appear {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+
+    20%,
+    80% {
+      top: calc(var(--spacing-base) * 2);
+      opacity: 1;
+    }
+
+    100% {
+      top: calc(var(--spacing-base) * 4);
+      opacity: 0;
+    }
+  }
+
+  opacity: 0;
+  position: fixed;
+  box-sizing: border-box;
+  font-weight: var(--font-weight-highlight);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: $bp;
+  padding: calc(var(--spacing-base) * 2);
+  border-radius: var(--spacing-base);
+  background-color: rgb(183 54 54 / 50%);
+  animation: appear 2s ease-in-out 1s forwards;
+}

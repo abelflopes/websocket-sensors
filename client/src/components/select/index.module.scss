@@ -1,0 +1,13 @@
+.root {
+  appearance: none;
+  height: var(--form-element-height);
+  font: inherit;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-highlight);
+  background-color: var(--color-form-element-background);
+  color: currentColor;
+  padding: calc(var(--form-element-height) / 4) calc(var(--form-element-height) / 2);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./theme";
+
+body {
+  background: var(--color-main-background);
+  color: var(--color-main-text);
+  font-family: "Noto Sans", sans-serif;
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-base);
+  min-height: 100dvh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing-base) * 6);
+  margin: 0;
+  box-sizing: border-box;
+
+  @media (width < $bp) {
+    padding: 0;
+    display: block;
+  }
+}
+
+h1 {
+  color: var(--color-highlighted-text);
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-weight: var(--font-weight-base);
+  margin-top: 0;
+  font-size: var(--font-size-xl);
+}

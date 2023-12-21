@@ -1,0 +1,44 @@
+.input {
+  display: none;
+}
+
+.label {
+  --height: calc(var(--form-element-height) * 0.6);
+  --width: var(--form-element-height);
+  --dotSize: calc(var(--form-element-height) / 4);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    height: var(--height);
+    width: var(--width);
+    border-radius: calc(var(--height) / 2);
+    background-color: var(--color-form-element-background);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: var(--dotSize);
+    width: var(--dotSize);
+    border-radius: 50%;
+    margin-left: auto;
+    background-color: var(--color-faded-text);
+    transform: translateX(calc((var(--height) - var(--dotSize)) / 2));
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.input:checked + .label::after {
+  transform: translateX(calc(var(--width) - var(--dotSize) - (var(--height) - var(--dotSize)) / 2));
+  background-color: var(--color-status-ok);
+}

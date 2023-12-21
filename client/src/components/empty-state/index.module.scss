@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: var(--font-size-base);
+  width: 100%;
+
+  .icon {
+    font-size: var(--font-size-xl);
+  }
+}
